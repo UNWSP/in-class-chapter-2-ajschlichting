@@ -17,10 +17,12 @@ public static void main(String[] args) {
 	int numericInput = Integer.parseInt(numberTickets);
 	
 	double totalTicketCost = numericInput * TICKETCOST;
-	double salesTaxAmt = totalTicketCost * SALESTAX;
+	double salesTaxAmt = (totalTicketCost+PROCESSINGFEE) * SALESTAX;
 	double totalCost = totalTicketCost + salesTaxAmt + PROCESSINGFEE;
 		
-		System.out.println(numberTickets + " tickets cost $" + totalCost);
+	
+	JOptionPane.showMessageDialog(null, numberTickets + " tickets cost $" + totalCost);
+
 	}
 
 	
